@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Three.js</title>
+    <style>
+        body { 
+            margin: 0;
+            background: #fff;
+        }
+        #info {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            color: #000;
+            font-family: monospace;
+            background: rgba(255,255,255,0.8);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">Testing Three.js...</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.157.0/three.min.js"></script>
+    <script>
+        const info = document.getElementById('info');
+
+        // Scene
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xffffff);
+        info.innerHTML += '<br>Scene created';
+
+        // Camera
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5;
+        info.innerHTML += '<br>Camera created';
+
+        // Renderer
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        info.innerHTML += '<br>Renderer created';
+
+        // Box
+        const geometry = new THREE.BoxGeometry(1, 1, 1);
+        const material = new THREE.MeshBasicMaterial({ color: 0x0000ff, wireframe: true });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+        info.innerHTML += '<br>Blue cube created';
+
+        // Animation
+        function animate() {
+            requestAnimationFrame(animate);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+
+        animate();
+        info.innerHTML += '<br>Animation started';
+    </script>
+</body>
+</html>

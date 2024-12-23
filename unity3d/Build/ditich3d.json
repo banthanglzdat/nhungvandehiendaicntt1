@@ -1,0 +1,16 @@
+{
+  "companyName": "DefaultCompany",
+  "productName": "DiTich3D",
+  "productVersion": "0.1",
+  "dataUrl": "ditich3d.data.unityweb",
+  "wasmCodeUrl": "ditich3d.wasm.code.unityweb",
+  "wasmFrameworkUrl": "ditich3d.wasm.framework.unityweb",
+  "TOTAL_MEMORY": 268435456,
+  "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+  "webglContextAttributes": {"preserveDrawingBuffer": false},
+  "splashScreenStyle": "Dark",
+  "backgroundColor": "#231F20",
+  "developmentBuild": false,
+  "multithreading": false,
+  "unityVersion": "2020.3.0f1"
+}

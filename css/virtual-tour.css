@@ -1,0 +1,174 @@
+.virtual-tour {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    position: relative;
+    overflow: hidden;
+}
+
+.virtual-tour::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: url('../images/pattern-bg.png') repeat;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.tour-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.tour-header h1 {
+    font-size: 3.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.tour-header h1::after {
+    content: '°';
+    color: #e67e22;
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    font-size: 4rem;
+}
+
+.tour-header p {
+    font-size: 1.4rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.tour-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.tour-description {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.tour-description p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.start-tour-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+}
+
+.start-tour-btn:hover {
+    background: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
+}
+
+.tour-preview {
+    flex: 1;
+    position: relative;
+}
+
+.tour-preview img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tour-preview img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.tour-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: #e67e22;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 992px) {
+    .tour-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tour-description {
+        padding-right: 0;
+    }
+
+    .tour-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .tour-preview {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tour-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .tour-header p {
+        font-size: 1.1rem;
+    }
+
+    .tour-description p {
+        font-size: 1rem;
+    }
+
+    .start-tour-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}

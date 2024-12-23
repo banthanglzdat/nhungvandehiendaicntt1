@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà Đày Buôn Ma Thuột - Di Tích Lịch Sử</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="css/virtual-tour.css">
+
+    <style>
+        .navbar {
+            background-color: #000000 !important;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .nav-link {
+            color: #ffffff !important;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffc107 !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-toggler {
+            border-color: #ffffff;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('images/nha-day-1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin-top: -76px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .hero-buttons .btn {
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .hero-buttons .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-aos="fade-right">
+                <i class="fas fa-landmark me-2"></i>
+                Nhà Đày Buôn Ma Thuột
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                        <a class="nav-link" href="#home">
+                            <i class="fas fa-home me-1"></i>
+                            Trang Chủ
+                        </a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                        <a class="nav-link" href="#history">
+                            <i class="fas fa-history me-1"></i>
+                            Lịch Sử
+                        </a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                        <a class="nav-link" href="#gallery">
+                            <i class="fas fa-images me-1"></i>
+                            Thư Viện Ảnh
+                        </a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                        <a class="nav-link" href="#map3d">
+                            <i class="fas fa-vr-cardboard me-1"></i>
+                            Tour Ảo
+                        </a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                        <a class="nav-link" href="#contact">
+                            <i class="fas fa-envelope me-1"></i>
+                            Liên Hệ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Nhà Đày Buôn Ma Thuột</h1>
+            <p class="hero-subtitle">Chứng tích lịch sử của cuộc đấu tranh giải phóng dân tộc</p>
+            <div class="hero-buttons">
+                <a href="#history" class="btn btn-primary">Tìm hiểu thêm</a>
+                <a href="#map3d" class="btn btn-outline-light">Tour ảo 360°</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="timeline-section">
+        <div class="container">
+            <h2>Dòng Thời Gian Lịch Sử Nhà Đày</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1940</div>
+                        <img src="images/nha-day-1.jpg" alt="Xây dựng Nhà Đày 1940" class="timeline-image">
+                        <h3>Xây Dựng Nhà Tù</h3>
+                        <p>Thực dân Pháp khởi công xây dựng nhà tù Buôn Ma Thuột, một công trình kiên cố được thiết kế để giam giữ các chiến sĩ cách mạng.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1941</div>
+                        <img src="images/nha-day-1.jpg" alt="Hoàn thành xây dựng 1941" class="timeline-image">
+                        <h3>Hoàn Thành Xây Dựng</h3>
+                        <p>Công trình hoàn thành với diện tích 3.000m², bao gồm khu giam giữ chính và các công trình phụ trợ như trạm gác, khu hành chính.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1945</div>
+                        <img src="images/nha-day-1.jpg" alt="Giai đoạn kháng chiến 1945" class="timeline-image">
+                        <h3>Giai Đoạn Kháng Chiến</h3>
+                        <p>Trong thời kỳ kháng chiến chống Pháp, nhà tù trở thành nơi giam cầm nhiều chiến sĩ cách mạng yêu nước, là chứng tích của tinh thần đấu tranh kiên cường.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1954</div>
+                        <img src="images/nha-day-1.jpg" alt="Thời kỳ chống Mỹ 1954" class="timeline-image">
+                        <h3>Thời Kỳ Chống Mỹ</h3>
+                        <p>Sau hiệp định Geneva, nhà tù tiếp tục là nơi giam giữ các chiến sĩ trong cuộc kháng chiến chống Mỹ, chứng kiến nhiều cuộc đấu tranh anh dũng.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1975</div>
+                        <img src="images/nha-day-1.jpg" alt="Giải phóng 1975" class="timeline-image">
+                        <h3>Giải Phóng</h3>
+                        <p>Cùng với sự kiện giải phóng miền Nam, Nhà Đày Buôn Ma Thuột được giải phóng, đánh dấu trang sử mới trong lịch sử đấu tranh cách mạng.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1980</div>
+                        <img src="images/nha-day-1.jpg" alt="Di tích lịch sử 1980" class="timeline-image">
+                        <h3>Di Tích Lịch Sử</h3>
+                        <p>Nhà Đày được công nhận là di tích lịch sử cấp quốc gia, trở thành địa điểm giáo dục truyền thống cách mạng cho thế hệ sau.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Map Section -->
+    <section id="map3d" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- Tour 360° -->
+                <div class="col-md-6 mb-4">
+                    <div class="tour-section">
+                        <h2>Tour Ảo 360° Nhà Đày Buôn Ma Thuột</h2>
+                        <p>Khám phá không gian di tích lịch sử qua góc nhìn 360 độ</p>
+                        <div class="tour-buttons">
+                            <a href="virtual-tour/virtual-tour.html" class="tour-button btn btn-primary">
+                                <i class="fas fa-vr-cardboard me-2"></i>
+                                Bắt đầu Tour 360°
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3D Model -->
+                <div class="col-md-6 mb-4">
+                    <div class="tour-section model-section">
+                        <h2>Khám Phá Di Tích 3D</h2>
+                        <p>Trải nghiệm không gian nhà đày qua mô hình 3D tương tác</p>
+                        <div class="tour-buttons">
+                            <a href="virtual-tour/3d-viewer.html" class="tour-button btn btn-primary">
+                                <i class="fas fa-cube me-2"></i>
+                                Xem Mô Hình 3D
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .tour-section {
+                background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/tour-bg.jpg');
+                background-size: cover;
+                background-position: center;
+                padding: 60px 20px;
+                text-align: center;
+                color: white;
+                border-radius: 10px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .model-section {
+                background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/3d-bg.jpg');
+            }
+            .tour-section h2 {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+            .tour-section p {
+                font-size: 1.2em;
+                margin-bottom: 30px;
+                opacity: 0.9;
+            }
+            .tour-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+            .tour-button {
+                background: #4CC3D9;
+                color: white;
+                text-decoration: none;
+                padding: 15px 30px;
+                border-radius: 30px;
+                font-size: 1.2em;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                transition: all 0.3s ease;
+            }
+            .tour-button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            }
+            .tour-button i {
+                font-size: 1.4em;
+            }
+            .section-padding {
+                padding: 60px 0;
+            }
+        </style>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Thư Viện Ảnh</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up">
+                    <img src="images/nha-day-1.jpg" alt="Nhà Đày Buôn Ma Thuột">
+                    <div class="overlay">
+                        <h5>Cổng chính</h5>
+                        <p>Cổng vào chính của Nhà Đày</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/nha-day-2.jpg" alt="Nhà Đày Buôn Ma Thuột">
+                    <div class="overlay">
+                        <h5>Khu giam giữ</h5>
+                        <p>Nơi giam giữ các tù nhân</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/nha-day-3.jpg" alt="Nhà Đày Buôn Ma Thuột">
+                    <div class="overlay">
+                        <h5>Hiện vật lịch sử</h5>
+                        <p>Các hiện vật được trưng bày</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="gallery.html" class="btn btn-primary" data-aos="fade-up">
+                    <i class="fas fa-images me-2"></i>
+                    Xem thêm ảnh
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="subtitle">Ký Ức</span>
+                <h2 class="title">Câu Chuyện Nhân Chứng</h2>
+                <p class="subtitle-description">
+                    Những câu chuyện được kể lại từ các nhân chứng lịch sử
+                </p>
+            </div>
+
+            <div class="testimonials-wrapper">
+                <div class="row g-4 justify-content-center">
+                    <!-- Testimonial 1 -->
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-image">
+                                        <img src="images/nha-day-4.jpg" alt="Nguyễn Văn A">
+                                    </div>
+                                    <div class="testimonial-meta">
+                                        <h3>Nguyễn Văn A</h3>
+                                        <span class="period">1945-1954</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <div class="quote-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <blockquote class="quote">
+                                        Tôi đã ở đây trong suốt 9 năm kháng chiến...
+                                    </blockquote>
+                                    <div class="story-preview">
+                                        <p>Những năm tháng ở đây đã để lại trong tôi những kỷ niệm không thể nào quên. Mỗi ngày trôi qua là một thử thách về ý chí và lòng kiên trì...</p>
+                                    </div>
+                                    <a href="stories/nguyen-van-a.html" class="btn-read-more">
+                                        <span class="text">Đọc Thêm</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-image">
+                                        <img src="images/nha-day-4.jpg" alt="Trần Thị B">
+                                    </div>
+                                    <div class="testimonial-meta">
+                                        <h3>Trần Thị B</h3>
+                                        <span class="period">1960-1975</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <div class="quote-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <blockquote class="quote">
+                                        Những năm tháng ở đây đã dạy tôi về ý nghĩa của tự do...
+                                    </blockquote>
+                                    <div class="story-preview">
+                                        <p>Mỗi ngày trong nhà tù là một bài học về sự kiên cường và tinh thần đấu tranh không ngừng nghỉ vì độc lập dân tộc...</p>
+                                    </div>
+                                    <a href="stories/tran-thi-b.html" class="btn-read-more">
+                                        <span class="text">Đọc Thêm</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map -->
+    <section id="map" class="map-section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="sub-heading">Bản Đồ</span>
+                <h2>Khám Phá Không Gian</h2>
+                <p>Tìm hiểu các khu vực quan trọng trong nhà tù</p>
+            </div>
+            
+            <div class="map-container">
+                <div class="explore-grid">
+                    <div class="space-item" data-aos="fade-up">
+                        <img src="images/nha-day-1.jpg" alt="Cổng chính Nhà Đày" class="space-image">
+                        <div class="space-content">
+                            <h3 class="space-title">Cổng chính</h3>
+                            <p class="space-description">Cổng vào chính của Nhà Đày</p>
+                        </div>
+                    </div>
+
+                    <div class="space-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/nha-day-2.jpg" alt="Khu giam giữ Nhà Đày" class="space-image">
+                        <div class="space-content">
+                            <h3 class="space-title">Khu giam giữ</h3>
+                            <p class="space-description">Khu vực giam giữ biệt lập</p>
+                        </div>
+                    </div>
+
+                    <div class="space-item" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/nha-day-3.jpg" alt="Sân sinh hoạt Nhà Đày" class="space-image">
+                        <div class="space-content">
+                            <h3 class="space-title">Sân Sinh Hoạt</h3>
+                            <p class="space-description">Nơi tù nhân lao động</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <span class="sub-heading">Cộng Đồng</span>
+                <h2>Tham Gia Cùng Chúng Tôi</h2>
+                <p>Chia sẻ và kết nối với cộng đồng</p>
+            </div>
+            
+            <div class="community-forms">
+                <div class="form-section" data-aos="fade-right">
+                    <h3>Góp Ý & Chia Sẻ</h3>
+                    <form id="feedback-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Họ và tên" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Nội dung chia sẻ" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Gửi</button>
+                    </form>
+                </div>
+
+                <div class="form-section" data-aos="fade-left">
+                    <h3>Đăng Ký Tham Quan</h3>
+                    <form id="visit-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Tên đoàn/nhóm" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Số lượng người" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Ghi chú thêm"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Đăng Ký</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="social-links" data-aos="fade-up">
+                <h3>Kết Nối Mạng Xã Hội</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Nhà Đày Buôn Ma Thuột</h5>
+                    <p>Di tích lịch sử cấp quốc gia</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/components/3DMap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
+    <script src="js/unity-loader.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script>
+        // Timeline Animation
+        function checkTimelineItems() {
+            const items = document.querySelectorAll('.timeline-item');
+            items.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (itemTop < windowHeight * 0.8) {
+                    item.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('load', checkTimelineItems);
+        window.addEventListener('scroll', checkTimelineItems);
+    </script>
+    <script src="js/virtual-tour.js"></script>
+</body>
+</html>

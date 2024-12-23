@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư viện ảnh - Nhà Đày Buôn Ma Thuột</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Nhà Đày Buôn Ma Thuột</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Thư viện ảnh</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="gallery-page py-5 mt-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Thư viện ảnh Nhà Đày Buôn Ma Thuột</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="text-center mb-4" data-aos="fade-up">
+                <button class="btn btn-outline-primary mx-2 mb-2 active" data-filter="all">Tất cả</button>
+                <button class="btn btn-outline-primary mx-2 mb-2" data-filter="historic">Lịch sử</button>
+                <button class="btn btn-outline-primary mx-2 mb-2" data-filter="architecture">Kiến trúc</button>
+                <button class="btn btn-outline-primary mx-2 mb-2" data-filter="modern">Hiện đại</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row g-4">
+                <!-- Historic Images -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="historic" data-aos="zoom-in">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/nha-day-2.jpg" alt="Nhà đày Buôn Ma Thuột - Ảnh lịch sử" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <a href="images/nha-day-2.jpg" data-lightbox="gallery" data-title="Cổng chính Nhà đày Buôn Ma Thuột">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h5>Cổng chính Nhà đày</h5>
+                            <p class="text-muted">Hình ảnh lịch sử</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="historic" data-aos="zoom-in">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/nha-day-1.jpg" alt="Khu vực giam giữ" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <a href="images/nha-day-1.jpg" data-lightbox="gallery" data-title="Khu vực giam giữ tù nhân">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h5>Khu vực giam giữ</h5>
+                            <p class="text-muted">Nơi giam giữ tù nhân thời kháng chiến</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Architecture Images -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="architecture" data-aos="zoom-in">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/nha-day-2.jpg" alt="Kiến trúc cổng" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <a href="images/nha-day-2.jpg" data-lightbox="gallery" data-title="Kiến trúc cổng chính">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h5>Kiến trúc cổng</h5>
+                            <p class="text-muted">Chi tiết kiến trúc cổng chính</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modern Images -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="modern" data-aos="zoom-in">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/nha-day-1.jpg" alt="Khu trưng bày" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <a href="images/nha-day-1.jpg" data-lightbox="gallery" data-title="Khu trưng bày hiện vật">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h5>Khu trưng bày</h5>
+                            <p class="text-muted">Trưng bày hiện vật lịch sử</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more gallery items here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Nhà Đày Buôn Ma Thuột</h5>
+                    <p>Di tích lịch sử cấp quốc gia</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>© 2024 Bảo tàng Nhà Đày Buôn Ma Thuột. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('[data-filter]');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
