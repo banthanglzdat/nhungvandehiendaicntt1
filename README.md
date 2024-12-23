@@ -3,7 +3,7 @@
 Đây là dự án Virtual Tour cho di tích lịch sử, cho phép người dùng tham quan và trải nghiệm không gian 3D.
 
 ## Demo
-Bạn có thể xem demo trực tiếp tại: https://banthanglzdat.github.io/nhungvandehiendaicntt1/
+Bạn có thể xem demo trực tiếp tại: https://cainayhay.github.io/nhungvandehiendaicntt1/
 
 ## Tính năng
 - Virtual Tour 360°
